@@ -42,7 +42,7 @@ function AdminDashboard() {
     const fetchAnnouncements = async () => {
         try {
             const token = localStorage.getItem('token')
-            const response = await axios.get('http://localhost:3000/api/announcements/all', {
+            const response = await axios.get('https://internal-announcement-management-backend.onrender.com/api/announcements/all', {
                 headers: { 'Authorization': `Bearer ${token}` }
             })
             setAnnouncements(response.data.announcements)
@@ -56,7 +56,7 @@ function AdminDashboard() {
         localStorage.removeItem('user')
         navigate('/Admin')
     }
-
+//https://internal-announcement-management-backend.onrender.com
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
@@ -64,14 +64,14 @@ function AdminDashboard() {
             
             if (editMode) {
                 await axios.put(
-                    `http://localhost:3000/api/announcements/${currentAnnouncementId}`,
+                    `https://internal-announcement-management-backend.onrender.com/api/announcements/${currentAnnouncementId}`,
                     formData,
                     { headers: { 'Authorization': `Bearer ${token}` } }
                 )
                 alert('Announcement updated successfully!')
             } else {
                 await axios.post(
-                    'http://localhost:3000/api/announcements',
+                    'https://internal-announcement-management-backend.onrender.com/api/announcements',
                     formData,
                     { headers: { 'Authorization': `Bearer ${token}` } }
                 )
@@ -106,7 +106,7 @@ function AdminDashboard() {
         
         try {
             const token = localStorage.getItem('token')
-            await axios.delete(`http://localhost:3000/api/announcements/${id}`, {
+            await axios.delete(`https://internal-announcement-management-backend.onrender.com/api/announcements/${id}`, {
                 headers: { 'Authorization': `Bearer ${token}` }
             })
             alert('Announcement deleted successfully!')

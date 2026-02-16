@@ -33,7 +33,7 @@ function Dashboard() {
             const token = localStorage.getItem('token')
             console.log('Fetching announcements...')
             
-            const response = await axios.get('http://localhost:3000/api/announcements', {
+            const response = await axios.get('https://internal-announcement-management-backend.onrender.com/api/announcements', {
                 headers: { 'Authorization': `Bearer ${token}` }
             })
             

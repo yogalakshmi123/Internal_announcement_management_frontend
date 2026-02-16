@@ -14,7 +14,7 @@ function AdminLogin(){
     const handleSubmit = async () => {
         setLoading(true)
         try {
-            const response = await axios.post('http://localhost:3000/api/login', {
+            const response = await axios.post('https://internal-announcement-management-backend.onrender.com/api/login', {
                 employeeId,
                 password
             })

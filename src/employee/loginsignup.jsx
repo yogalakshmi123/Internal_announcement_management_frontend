@@ -16,8 +16,8 @@ function LoginSignup(){
         setLoading(true)
         try {
             const url = isLogin 
-                ? "http://localhost:3000/api/login" 
-                : "http://localhost:3000/api/signup"
+                ? "https://internal-announcement-management-backend.onrender.com/api/login" 
+                : "https://internal-announcement-management-backend.onrender.com/api/signup"
             
             const payload = isLogin 
                 ? { employeeId, password }

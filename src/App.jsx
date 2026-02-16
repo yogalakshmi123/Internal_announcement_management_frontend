@@ -8,6 +8,8 @@ import Dashboard from './employee/dashboard'
 import AdminLogin from './admin/loginsignup'
 import AdminDashboard from './admin/dashboard'
 
+//mongodb+srv://y96997306_db_user:<db_password>@cluster0.6cmxif3.mongodb.net/?appName=Cluster0
+
 function App() {
   
 

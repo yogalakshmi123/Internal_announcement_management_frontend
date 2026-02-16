@@ -16,7 +16,7 @@ function CreateAdminModal({ isOpen, onClose, onSuccess }) {
         try {
             const token = localStorage.getItem('token')
             await axios.post(
-                'http://localhost:3000/api/admin/create',
+                'https://internal-announcement-management-backend.onrender.com/api/admin/create',
                 { ...adminFormData, role: 'admin' },
                 { headers: { 'Authorization': `Bearer ${token}` } }
             )
